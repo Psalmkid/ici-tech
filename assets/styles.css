@@ -1143,85 +1143,23 @@ body.no-bg-image {
     .contact-wrapper {
         grid-template-columns: 1fr;
     }
-}
 
-@media (max-width: 480px) {
-    /* Make base font smaller on mobile */
-    body {
-        font-size: 0.95rem;
-    }
-
-    .navbar .container {
-        padding: 0.8rem 1rem;
-    }
-
-    .logo {
-        font-size: 1.3rem;
-    }
-
-    .hero {
-        padding: 3rem 1rem;
-        min-height: auto;
-    }
-
-    .hero-content h1 {
-        font-size: 1.6rem;
-    }
-
-    .hero-content p {
-        font-size: 0.9rem;
-    }
-
-    .introduction p {
-        font-size: 0.9rem;
-        text-align: left;
-    }
-
-    /* Reduce section padding further for mobile */
-    .introduction, .services, .why-choose, .pricing, .process, .benefits, .contact, .core-services, .tech-stack, .mission-vision, .faq {
-        padding: 3rem 1rem;
-    }
-    
-    .introduction h2,
-    .services h2,
-    .why-choose h2,
-    .pricing h2,
-    .process h2,
-    .benefits h2,
-    .contact h2,
-    .core-services h2,
-    .tech-stack h2,
-    .faq h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    /* Compact cards and elements */
-    .service-card, .price-card, .feature, .step, .mission-card, .vision-card, .client-item {
-        padding: 1.5rem;
-    }
-
-    .process-steps {
+    .footer-content {
         grid-template-columns: 1fr;
     }
 
-    .benefits-list {
-        grid-template-columns: 1fr;
+    .footer-section {
+        text-align: center;
     }
 
-    .clients-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Specific pricing adjustments */
-    .price-card h3 {
-        font-size: 1.3rem;
+    .social-links {
+        justify-content: center;
     }
 }
 
-/* ============================================
-   FAQ Accordion
-   ============================================ */
+/* =======
+   FAQ Section
+   =========================================== */
 
 .faq {
     padding: 5rem 1.5rem;
@@ -1233,17 +1171,16 @@ body.no-bg-image {
     text-align: center;
     margin-bottom: 3rem;
     color: var(--secondary-color);
-}
+} 
 
 .faq-accordion {
     max-width: 800px;
-    margin: 2rem auto 0;
+    margin: 2rem auto;
 }
 
 .faq-item {
     border-bottom: 1px solid var(--border-color);
 }
-
 .faq-item:last-child {
     border-bottom: none;
 }
@@ -1267,8 +1204,7 @@ body.no-bg-image {
 }
 
 .faq-question span:first-child { /* The text */
-    color: var(--white);
-    font-size: 1.2rem;
+    color: var(--text-light);
     font-weight: 500;
     font-family: inherit;
     padding-right: 1rem;
@@ -1281,18 +1217,17 @@ body.no-bg-image {
     transition: transform 0.3s ease;
     flex-shrink: 0;
     -webkit-user-select: none;
-    user-select:none;
+    user-select: none;
 }
 
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-out;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-answer p {
     padding-bottom: 1.5rem;
-    margin: 0;
     color: var(--text-light);
     opacity: 0.9;
     line-height: 1.7;
@@ -1300,7 +1235,7 @@ body.no-bg-image {
 
 /* Active state for accordion */
 .faq-item.active .faq-answer {
-    max-height: 300px; /* A safe height for the content */
+    max-height: 500px; /* A safe height for the content */
 }
 
 .faq-item.active .faq-icon {
