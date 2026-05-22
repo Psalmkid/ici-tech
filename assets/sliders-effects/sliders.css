@@ -1,0 +1,551 @@
+/* ============================================================
+   sliders.css — Reusable Slider & Carousel Styles
+   Drop this file into any project alongside sliders.js
+   ============================================================ */
+
+/* ── Reset ── */
+.sb-slider *,
+.sb-slider *::before,
+.sb-slider *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   1. HERO SLIDER
+   ============================================================ */
+.sb-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.sb-hero__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.sb-hero__slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* fade mode overrides */
+.sb-hero--fade .sb-hero__track {
+  display: block;
+  transition: none;
+}
+.sb-hero--fade .sb-hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  pointer-events: none;
+}
+.sb-hero--fade .sb-hero__slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+.sb-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.08);
+  transition: transform 6s ease;
+  will-change: transform;
+}
+.sb-hero__slide.is-active .sb-hero__bg {
+  transform: scale(1);
+}
+
+.sb-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.sb-hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 0 2rem;
+  max-width: 900px;
+}
+
+.sb-hero__eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  margin-bottom: 1.25rem;
+}
+
+.sb-hero__heading {
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.08;
+  margin-bottom: 1.5rem;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.7s 0.2s ease, opacity 0.7s 0.2s ease;
+}
+.sb-hero__slide.is-active .sb-hero__heading {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.sb-hero__sub {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 2.5rem;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.7s 0.4s ease, opacity 0.7s 0.4s ease;
+}
+.sb-hero__slide.is-active .sb-hero__sub {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.sb-hero__cta {
+  display: inline-flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.7s 0.6s ease, opacity 0.7s 0.6s ease;
+}
+.sb-hero__slide.is-active .sb-hero__cta {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ── Navigation arrows ── */
+.sb-hero__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 52px;
+  height: 52px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+}
+.sb-hero__arrow:hover {
+  background: rgba(167,139,250,0.4);
+  border-color: #a78bfa;
+  transform: translateY(-50%) scale(1.1);
+}
+.sb-hero__arrow--prev { left: 2rem; }
+.sb-hero__arrow--next { right: 2rem; }
+.sb-hero__arrow svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.5; }
+
+/* ── Dots ── */
+.sb-hero__dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+.sb-hero__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, width 0.3s;
+  border: none;
+}
+.sb-hero__dot.is-active {
+  background: #a78bfa;
+  width: 28px;
+  border-radius: 4px;
+}
+
+/* ── Progress bar ── */
+.sb-hero__progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: #a78bfa;
+  width: 0%;
+  transition: width linear;
+  z-index: 10;
+}
+
+/* ============================================================
+   2. CONTENT / CARD SLIDER
+   ============================================================ */
+.sb-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.sb-slider__track {
+  display: flex;
+  gap: var(--sb-gap, 1.5rem);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.sb-slider__slide {
+  flex: 0 0 var(--sb-slide-width, 33.333%);
+  min-width: 0;
+}
+
+/* Responsive defaults */
+@media (max-width: 900px) {
+  .sb-slider__slide { flex: 0 0 50%; }
+}
+@media (max-width: 600px) {
+  .sb-slider__slide { flex: 0 0 90%; }
+}
+
+.sb-slider__arrows {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.sb-slider__arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  color: inherit;
+}
+.sb-slider__arrow:hover {
+  background: currentColor;
+  color: #fff;
+  transform: scale(1.08);
+}
+.sb-slider__arrow:disabled { opacity: 0.3; cursor: default; }
+.sb-slider__arrow svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.5; }
+
+.sb-slider__dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.sb-slider__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.3;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.sb-slider__dot.is-active { opacity: 1; transform: scale(1.3); }
+
+/* ── Dragging state ── */
+.sb-slider.is-dragging .sb-slider__track {
+  transition: none;
+  cursor: grabbing;
+}
+.sb-slider__track { cursor: grab; }
+
+/* ============================================================
+   3. LOGO TICKER / INFINITE MARQUEE
+   ============================================================ */
+.sb-ticker {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.sb-ticker__inner {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: sbTickerScroll var(--sb-ticker-speed, 30s) linear infinite;
+}
+.sb-ticker--reverse .sb-ticker__inner {
+  animation-direction: reverse;
+}
+.sb-ticker:hover .sb-ticker__inner {
+  animation-play-state: paused;
+}
+
+.sb-ticker__track {
+  display: flex;
+  align-items: center;
+  gap: var(--sb-ticker-gap, 4rem);
+}
+
+.sb-ticker__item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+@keyframes sbTickerScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Fade edges */
+.sb-ticker::before,
+.sb-ticker::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.sb-ticker::before {
+  left: 0;
+  background: linear-gradient(to right, var(--sb-ticker-bg, #fff), transparent);
+}
+.sb-ticker::after {
+  right: 0;
+  background: linear-gradient(to left, var(--sb-ticker-bg, #fff), transparent);
+}
+
+/* ============================================================
+   4. TESTIMONIAL SLIDER
+   ============================================================ */
+.sb-testimonial {
+  position: relative;
+  overflow: hidden;
+}
+
+.sb-testimonial__track {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.sb-testimonial__slide {
+  min-width: 100%;
+  padding: 0 1rem;
+}
+
+.sb-testimonial__card {
+  background: var(--sb-card-bg, #fff);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sb-testimonial__quote {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  line-height: 1.65;
+  color: var(--sb-text, #1a1a2e);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.sb-testimonial__quote::before { content: '\201C'; }
+.sb-testimonial__quote::after  { content: '\201D'; }
+
+.sb-testimonial__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  display: block;
+  background: #a78bfa;
+}
+
+.sb-testimonial__name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--sb-text, #1a1a2e);
+  margin-bottom: 0.25rem;
+}
+.sb-testimonial__role {
+  font-size: 0.875rem;
+  color: #888;
+}
+
+.sb-testimonial__stars {
+  color: #fbbf24;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Tabs nav ── */
+.sb-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid rgba(0,0,0,0.08);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.sb-tabs::-webkit-scrollbar { display: none; }
+
+.sb-tab {
+  padding: 0.875rem 1.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #888;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.3s;
+}
+.sb-tab.is-active {
+  color: #a78bfa;
+  border-bottom-color: #a78bfa;
+}
+
+.sb-tab-panels { overflow: hidden; }
+
+.sb-tab-panel {
+  display: none;
+  animation: sbFadeSlideIn 0.4s ease;
+}
+.sb-tab-panel.is-active { display: block; }
+
+@keyframes sbFadeSlideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   5. CARD (shared)
+   ============================================================ */
+.sb-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--sb-card-bg, #fff);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.sb-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.14);
+}
+
+.sb-card__img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  background: #e5e7eb;
+}
+.sb-card:hover .sb-card__img { transform: scale(1.05); }
+
+.sb-card__body { padding: 1.5rem; }
+.sb-card__tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  margin-bottom: 0.5rem;
+}
+.sb-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--sb-text, #1a1a2e);
+}
+.sb-card__desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #888;
+}
+
+/* ============================================================
+   6. BUTTONS (shared)
+   ============================================================ */
+.sb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2.25rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.sb-btn--primary {
+  background: #a78bfa;
+  color: #fff;
+  border-color: #a78bfa;
+}
+.sb-btn--primary:hover {
+  background: #7c3aed;
+  border-color: #7c3aed;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(167,139,250,0.4);
+}
+.sb-btn--outline {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255,255,255,0.5);
+}
+.sb-btn--outline:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Ripple effect */
+.sb-btn .sb-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  transform: scale(0);
+  animation: sbRipple 0.6s linear;
+  pointer-events: none;
+}
+@keyframes sbRipple {
+  to { transform: scale(4); opacity: 0; }
+}

@@ -1,16 +1,18 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ICI Tech Services — premium web design, e-commerce, SaaS platforms, and web applications for high-growth teams.">
+    <meta name="description" content="ICI Tech Services  premium web design, e-commerce, SaaS platforms, and web applications for high-growth teams.">
     <meta name="keywords" content="web services, SaaS platforms, e-commerce development, design systems, product engineering">
     <title>Services - ICI Tech</title>
-    <link rel="icon" type="image/png" href="assets/img/icon.png">
-    <link rel="apple-touch-icon" href="assets/img/icon.png">
+    <link rel="icon" type="image/png" href="assets/img/Favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/Favicon.png">
     <link rel="stylesheet" href="assets/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 </head>
 <body>
+    <canvas id="three-bg"></canvas>
     <header class="site-header">
         <nav class="navbar" aria-label="Primary navigation">
             <div class="container nav-inner">
@@ -23,7 +25,6 @@
                 <ul class="nav-menu" id="nav-menu-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -31,24 +32,12 @@
             </div>
         </nav>
         <section class="hero hero-bg">
-            <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <p class="eyebrow fade-in">Services</p>
-                    <h1 class="fade-in">Modern product and platform delivery for ambitious businesses.</h1>
-                    <p class="fade-in">We create premium websites, SaaS landing pages, e-commerce platforms, and custom web applications that strengthen trust and drive outcomes.</p>
-                    <div class="hero-actions fade-in">
+                    <p class="eyebrow">Services</p>
+                    <h1>Modern product and platform delivery for ambitious businesses.</h1>
+                    <p>We create premium websites, SaaS landing pages, e-commerce platforms, and custom web applications that strengthen trust and drive outcomes.</p>
+                    <div class="hero-actions">
                         <a class="cta-button" href="contact.html">Talk to our team</a>
                         <a class="cta-secondary" href="#core-services">View services</a>
                     </div>
@@ -56,6 +45,18 @@
             </div>
         </section>
     </header>
+    <section class="hero-visual">
+        <div class="container hero-visual-grid">
+            <div class="hero-visual-copy fade-in">
+                <div class="section-label">Visual case study</div>
+                <h2>A premium product snapshot built for modern digital platforms.</h2>
+                <p>This image shows a polished customer experience with clear hierarchy, streamlined commerce flows, and confidence-building interface details.</p>
+            </div>
+            <div class="hero-visual-image fade-in">
+                <img src="assets/img/preview.png" alt="Preview of a polished digital platform" loading="lazy">
+            </div>
+        </div>
+    </section>
     <main>
         <section class="impact" id="core-services">
             <div class="container">
@@ -84,7 +85,7 @@
                 <h2>Solutions for every stage of growth.</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <h3><span class="service-icon">🌐</span> Business Websites</h3>
+                        <h3><span class="service-icon"><img src="https://cdn.simpleicons.org/googlechrome/ffffff" alt="" style="width:22px; height:22px; filter:brightness(0) invert(1);"></span> Business Websites</h3>
                         <p>Brand-led websites for executive teams and B2B buyers.</p>
                         <ul>
                             <li>Strategic content architecture</li>
@@ -93,7 +94,7 @@
                         </ul>
                     </div>
                     <div class="service-card">
-                        <h3><span class="service-icon">🛒</span> E-Commerce Platforms</h3>
+                        <h3><span class="service-icon"><img src="https://cdn.simpleicons.org/shopify/ffffff" alt="" style="width:22px; height:22px; filter:brightness(0) invert(1);"></span> E-Commerce Platforms</h3>
                         <p>Secure commerce experiences designed to reduce friction and increase average order value.</p>
                         <ul>
                             <li>Checkout optimization</li>
@@ -102,7 +103,7 @@
                         </ul>
                     </div>
                     <div class="service-card">
-                        <h3><span class="service-icon">💻</span> Web Applications</h3>
+                        <h3><span class="service-icon"><img src="https://cdn.simpleicons.org/react/ffffff" alt="" style="width:22px; height:22px; filter:brightness(0) invert(1);"></span> Web Applications</h3>
                         <p>Custom tools and portals built for sustainability, reliability, and ease of use.</p>
                         <ul>
                             <li>Dashboard experiences</li>
@@ -139,20 +140,48 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container footer-grid">
-            <div>
-                <a class="logo footer-logo" href="index.html">ICI Tech</a>
-                <p>Enterprise web experiences and product systems for fast-growth technology teams.</p>
-            </div>
-            <div class="footer-links">
-                <a href="about.html">About</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="contact.html">Contact</a>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div>
+                    <a class="logo footer-logo" href="index.html">ICI Tech</a>
+                    <p>Enterprise web experiences and product systems designed to scale. Building conversion-first platforms for growth.</p>
+                </div>
+                
+                <!-- Products Section -->
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Web Services</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="footer-note">Copyright © 2026 ICI Tech.</div>
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-policy-links">
+                    <a href="policies.html#privacy">Privacy Policy</a>
+                    <a href="policies.html#cookies">Cookie Policy</a>
+                    <a href="policies.html#terms">Terms of Use</a>
+                </div>
+                <div class="footer-note">© 2026 ICI Tech. All rights reserved.</div>
+            </div>
+        </div>
     </footer>
     <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
     <script src="assets/script.js"></script>
+    <script src="assets/three-bg.js"></script>
+    <script src="assets/cookie-consent.js"></script>
 </body>
 </html>

@@ -1,16 +1,18 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About ICI Tech — premium digital product systems for SaaS, fintech, and enterprise teams.">
+    <meta name="description" content="About ICI Tech � premium digital product systems for SaaS, fintech, and enterprise teams.">
     <meta name="keywords" content="about ICI Tech, enterprise web development, SaaS design, team, mission">
     <title>About Us - ICI Tech</title>
-    <link rel="icon" type="image/png" href="assets/img/icon.png">
-    <link rel="apple-touch-icon" href="assets/img/icon.png">
+    <link rel="icon" type="image/png" href="assets/img/Favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/Favicon.png">
     <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/three.min.js" defer></script>
 </head>
 <body>
+    <canvas id="three-bg"></canvas>
     <header class="site-header">
         <nav class="navbar" aria-label="Primary navigation">
             <div class="container nav-inner">
@@ -23,32 +25,20 @@
                 <ul class="nav-menu" id="nav-menu-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <a class="nav-cta" href="contact.html">Book a call</a>
             </div>
         </nav>
         <section class="hero hero-bg">
-            <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <p class="eyebrow fade-in">About ICI Tech</p>
-                    <h1 class="fade-in">We design and build enterprise-grade digital platforms with precision and speed.</h1>
-                    <p class="fade-in">From strategic product planning to polished web experiences and reliable engineering, we help ambitious companies move faster without compromising quality.</p>
-                    <div class="hero-actions fade-in">
+                    <p class="eyebrow">About ICI Tech</p>
+                    <h1>We design and build enterprise-grade digital platforms with precision and speed.</h1>
+                    <p>From strategic product planning to polished web experiences and reliable engineering, we help ambitious companies move faster without compromising quality.</p>
+                    <div class="hero-actions">
                         <a class="cta-button" href="contact.html">Start a project</a>
                         <a class="cta-secondary" href="#mission">Our mission</a>
                     </div>
@@ -73,6 +63,30 @@
                 <div class="credibility-item">
                     <strong>Revenue-focused</strong>
                     <span>Design and engineering that improve conversion and trust.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-details" aria-label="Trust and results">
+            <div class="container trust-grid">
+                <div class="trust-copy fade-in">
+                    <div class="section-label">Trust signals</div>
+                    <h2>We build digital products that feel reliably premium and inspire confidence.</h2>
+                    <p>Every project includes thoughtful product strategy, enterprise-grade engineering, and polished experience design so stakeholders and customers feel secure at every step.</p>
+                </div>
+                <div class="trust-stats">
+                    <div class="stat-panel fade-in">
+                        <strong>15+</strong>
+                        <span>enterprise launches with high retention and strong growth velocity.</span>
+                    </div>
+                    <div class="stat-panel fade-in">
+                        <strong>4.9 / 5</strong>
+                        <span>average client satisfaction score across product and delivery experience.</span>
+                    </div>
+                    <div class="stat-panel fade-in">
+                        <strong>60%</strong>
+                        <span>average improvement in qualified lead flow for commercial product launches.</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -123,20 +137,51 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container footer-grid">
-            <div>
-                <a class="logo footer-logo" href="index.html">ICI Tech</a>
-                <p>Enterprise web experiences and product systems for fast-growth technology teams.</p>
-            </div>
-            <div class="footer-links">
-                <a href="services.html">Services</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="contact.html">Contact</a>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div>
+                    <a class="logo footer-logo" href="index.html">
+                        <img src="assets/img/icon.png" alt="ICI Tech Logo" class="logo-icon">
+                        ICI Tech
+                    </a>
+                    <p>Enterprise web experiences and product systems designed to scale. Building conversion-first platforms for growth.</p>
+                </div>
+                
+                <!-- Products Section -->
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Web Services</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="footer-note">Copyright © 2026 ICI Tech.</div>
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-policy-links">
+                    <a href="policies.html#privacy">Privacy Policy</a>
+                    <a href="policies.html#cookies">Cookie Policy</a>
+                    <a href="policies.html#terms">Terms of Use</a>
+                </div>
+                <div class="footer-note">© 2026 ICI Tech. All rights reserved.</div>
+            </div>
+        </div>
     </footer>
     <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
     <script src="assets/script.js"></script>
+    <script src="assets/three-bg.js"></script>
+    <script src="assets/cookie-consent.js"></script>
 </body>
 </html>

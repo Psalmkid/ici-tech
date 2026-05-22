@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,11 +6,13 @@
     <meta name="description" content="Contact ICI Tech to discuss your website, product, or platform project and get a tailored proposal.">
     <meta name="keywords" content="contact, request quote, web development inquiry, product design contact">
     <title>Contact - ICI Tech</title>
-    <link rel="icon" type="image/png" href="assets/img/icon.png">
-    <link rel="apple-touch-icon" href="assets/img/icon.png">
+    <link rel="icon" type="image/png" href="assets/img/Favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/Favicon.png">
     <link rel="stylesheet" href="assets/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 </head>
 <body>
+    <canvas id="three-bg"></canvas>
     <header class="site-header">
         <nav class="navbar" aria-label="Primary navigation">
             <div class="container nav-inner">
@@ -23,32 +25,20 @@
                 <ul class="nav-menu" id="nav-menu-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <a class="nav-cta" href="contact.html">Start a project</a>
             </div>
         </nav>
         <section class="hero hero-bg">
-            <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <p class="eyebrow fade-in">Contact</p>
-                    <h1 class="fade-in">Start your next digital product with clarity and premium delivery.</h1>
-                    <p class="fade-in">Share your goals, timeline, and priorities so we can recommend the right package and team setup for your project.</p>
-                    <div class="hero-actions fade-in">
+                    <p class="eyebrow">Contact</p>
+                    <h1>Start your next digital product with clarity and premium delivery.</h1>
+                    <p>Share your goals, timeline, and priorities so we can recommend the right package and team setup for your project.</p>
+                    <div class="hero-actions">
                         <a class="cta-button" href="#contact-form">Send a message</a>
                         <a class="cta-secondary" href="#contact-info">View office details</a>
                     </div>
@@ -77,21 +67,21 @@
                         <div class="contact-details">
                             <div>
                                 <strong>Email</strong>
-                                <a href="mailto:hello@icitech.com">hello@icitech.com</a>
+                                <a href="mailto:icitexh@gmail.com">icitexh@gmail.com</a>
                             </div>
                             <div>
                                 <strong>Location</strong>
-                                <p>Lagos, Nigeria • Remote-friendly worldwide</p>
+                                <p>Lagos Island, Nigeria</p>
                             </div>
                             <div>
                                 <strong>Availability</strong>
-                                <p>New project intake opens quarterly</p>
+                                <p>New project intake slots always open</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form-card" id="contact-form">
-                    <form class="contact-form" id="contactForm" action="mailto:hello@icitech.com" method="POST" enctype="text/plain">
+                    <form class="contact-form" id="contactForm" action="mailto:icitexh@gmail.com" method="POST" enctype="text/plain">
                         <h2>Reach out for a proposal</h2>
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -116,20 +106,49 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container footer-grid">
-            <div>
-                <a class="logo footer-logo" href="index.html">ICI Tech</a>
-                <p>Enterprise experiences and product systems for fast-growth teams.</p>
-            </div>
-            <div class="footer-links">
-                <a href="services.html">Services</a>
-                <a href="about.html">About</a>
-                <a href="pricing.html">Pricing</a>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div>
+                    <a class="logo footer-logo" href="index.html">ICI Tech</a>
+                    <p>Enterprise web experiences and product systems designed to scale. Building conversion-first platforms for growth.</p>
+                </div>
+                
+                <!-- Products Section -->
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Web Services</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="footer-note">Copyright © 2026 ICI Tech.</div>
+
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-policy-links">
+                    <a href="policies.html#privacy">Privacy Policy</a>
+                    <a href="policies.html#cookies">Cookie Policy</a>
+                    <a href="policies.html#terms">Terms of Use</a>
+                </div>
+                <div class="footer-note">© 2026 ICI Tech. All rights reserved.</div>
+            </div>
+        </div>
     </footer>
     <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
     <script src="assets/script.js"></script>
+    <script src="assets/three-bg.js"></script>
+    <script src="assets/cookie-consent.js"></script>
 </body>
 </html>

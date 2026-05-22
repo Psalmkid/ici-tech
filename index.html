@@ -1,16 +1,19 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium digital platforms for SaaS, fintech, and enterprise teams. Scalable web systems built for performance, trust, and growth.">
     <meta name="keywords" content="enterprise web design, SaaS development, fintech websites, scalable platforms, digital transformation">
-    <title>ICI Tech | Enterprise Web Systems for Growth-Driven Teams</title>
-    <link rel="icon" type="image/png" href="assets/img/icon.png">
-    <link rel="apple-touch-icon" href="assets/img/icon.png">
+    <title>ICI Tech | Innovative Computers Industries</title>
+    <link rel="icon" type="image/png" href="assets/img/Favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/Favicon.png">
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/sliders-effects/sliders.css">
+    <script src="assets/three.min.js" defer></script>
 </head>
-<body>
+<body id="top">
+    <canvas id="three-bg"></canvas>
     <header class="site-header">
         <nav class="navbar" aria-label="Primary navigation">
             <div class="container">
@@ -20,57 +23,121 @@
                     <span></span>
                     <span></span>
                 </button>
+                <a class="nav-cta" href="contact.html">Book a call</a>
                 <ul class="nav-menu" id="nav-menu-list">
-                    <li><a class="nav-link" href="index.html">Home</a></li>
-                    <li><a class="nav-link" href="services.html">Services</a></li>
-                    <li><a class="nav-link" href="about.html">About</a></li>
-                    <li><a class="nav-link" href="pricing.html">Pricing</a></li>
-                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
         <section class="hero hero-bg">
-            <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <p class="eyebrow fade-in">Enterprise web systems for growth teams</p>
-                    <h1 class="fade-in">Build secure, high-converting digital platforms that scale with confidence.</h1>
-                    <p class="fade-in">We partner with SaaS, fintech, and B2B companies to launch premium web products faster, reduce operational risk, and deliver measurable revenue growth.</p>
-                    <div class="hero-actions fade-in">
+                    <h1 class="hero-headline fade-in">
+                        Brand. Websites.<br>
+                        Performance.<br>
+                        <span class="rotating-text" id="rotatingText">One team.</span>
+                    </h1>
+                    <p>We build premium digital platforms for SaaS, fintech, and enterprise teams. Scalable web systems built for performance, trust, and growth.</p>
+                    <div class="hero-actions">
                         <a class="cta-button" href="contact.html">Schedule a strategy call</a>
                         <a class="cta-secondary" href="#impact">Explore our work</a>
                     </div>
-                    <div class="hero-badges fade-in">
+                    <div class="hero-badges">
                         <span>120+ growth teams</span>
                         <span>98% client retention</span>
                         <span>500M+ ARR supported</span>
                     </div>
                 </div>
-                <div class="hero-panel slide-in-left">
-                    <div class="hero-panel-card">
-                        <div class="panel-label">Featured case study</div>
-                        <h2 class="panel-title">Revenue platform re-platformed in 45 days</h2>
-                        <p class="panel-copy">We rebuilt a fintech growth engine with a secure API-first web experience and lifted conversion by 28% within the first quarter.</p>
-                        <div class="panel-meta">
-                            <span>Fintech</span>
-                            <span>Launch in 6 weeks</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </header>
+
+    <!-- Tech Stack Tickers -->
+    <section class="tech-tickers">
+        <!-- Row 1: Frontend -->
+        <div class="sb-ticker" data-sb-ticker data-sb-speed="45">
+            <div class="sb-ticker__inner">
+                <div class="sb-ticker__track">
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/javascript/ffffff" alt="JavaScript logo" loading="lazy"></span> JavaScript</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/typescript/ffffff" alt="TypeScript logo" loading="lazy"></span> TypeScript</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/react/ffffff" alt="React logo" loading="lazy"></span> React</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="Next.js logo" loading="lazy"></span> Next.js</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/vuedotjs/ffffff" alt="Vue.js logo" loading="lazy"></span> Vue.js</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/angular/ffffff" alt="Angular logo" loading="lazy"></span> Angular</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/svelte/ffffff" alt="Svelte logo" loading="lazy"></span> Svelte</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/tailwindcss/ffffff" alt="Tailwind logo" loading="lazy"></span> Tailwind</div>
+                </div>
+                <div class="sb-ticker__track">
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/javascript/ffffff" alt="JavaScript logo" loading="lazy"></span> JavaScript</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/typescript/ffffff" alt="TypeScript logo" loading="lazy"></span> TypeScript</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/react/ffffff" alt="React logo" loading="lazy"></span> React</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="Next.js logo" loading="lazy"></span> Next.js</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/vuedotjs/ffffff" alt="Vue.js logo" loading="lazy"></span> Vue.js</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/angular/ffffff" alt="Angular logo" loading="lazy"></span> Angular</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/svelte/ffffff" alt="Svelte logo" loading="lazy"></span> Svelte</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/tailwindcss/ffffff" alt="Tailwind logo" loading="lazy"></span> Tailwind</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Backend & Infrastructure -->
+        <div class="sb-ticker sb-ticker--reverse" data-sb-ticker data-sb-speed="40" data-sb-reverse="true">
+            <div class="sb-ticker__inner">
+                <div class="sb-ticker__track">
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/nodedotjs/ffffff" alt="Node.js logo" loading="lazy"></span> Node.js</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/python/ffffff" alt="Python logo" loading="lazy"></span> Python</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/go/ffffff" alt="Go logo" loading="lazy"></span> Go</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/graphql/ffffff" alt="GraphQL logo" loading="lazy"></span> GraphQL</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/postgresql/ffffff" alt="PostgreSQL logo" loading="lazy"></span> PostgreSQL</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/mongodb/ffffff" alt="MongoDB logo" loading="lazy"></span> MongoDB</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/docker/ffffff" alt="Docker logo" loading="lazy"></span> Docker</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://api.iconify.design/logos:aws.svg" alt="AWS logo" loading="lazy"></span> AWS</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/vercel/ffffff" alt="Vercel logo" loading="lazy"></span> Vercel</div>
+                </div>
+                <div class="sb-ticker__track">
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/nodedotjs/ffffff" alt="Node.js logo" loading="lazy"></span> Node.js</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/python/ffffff" alt="Python logo" loading="lazy"></span> Python</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/go/ffffff" alt="Go logo" loading="lazy"></span> Go</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/graphql/ffffff" alt="GraphQL logo" loading="lazy"></span> GraphQL</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/postgresql/ffffff" alt="PostgreSQL logo" loading="lazy"></span> PostgreSQL</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/mongodb/ffffff" alt="MongoDB logo" loading="lazy"></span> MongoDB</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/docker/ffffff" alt="Docker logo" loading="lazy"></span> Docker</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://api.iconify.design/logos:aws.svg" alt="AWS logo" loading="lazy"></span> AWS</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/vercel/ffffff" alt="Vercel logo" loading="lazy"></span> Vercel</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 3: Platforms & Productivity -->
+        <div class="sb-ticker" data-sb-ticker data-sb-speed="35">
+            <div class="sb-ticker__inner">
+                <div class="sb-ticker__track">
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub logo" loading="lazy"></span> GitHub</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/stripe/ffffff" alt="Stripe logo" loading="lazy"></span> Stripe</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/shopify/ffffff" alt="Shopify logo" loading="lazy"></span> Shopify</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/hubspot/ffffff" alt="HubSpot logo" loading="lazy"></span> HubSpot</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://api.iconify.design/logos:microsoft-icon.svg" alt="Microsoft logo" loading="lazy"></span> Microsoft</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://api.iconify.design/logos:slack-icon.svg" alt="Slack logo" loading="lazy"></span> Slack</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/notion/ffffff" alt="Notion logo" loading="lazy"></span> Notion</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/figma/ffffff" alt="Figma logo" loading="lazy"></span> Figma</div>
+                </div>
+                <div class="sb-ticker__track">
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub logo" loading="lazy"></span> GitHub</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/stripe/ffffff" alt="Stripe logo" loading="lazy"></span> Stripe</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/shopify/ffffff" alt="Shopify logo" loading="lazy"></span> Shopify</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/hubspot/ffffff" alt="HubSpot logo" loading="lazy"></span> HubSpot</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://api.iconify.design/logos:microsoft-icon.svg" alt="Microsoft logo" loading="lazy"></span> Microsoft</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://api.iconify.design/logos:slack-icon.svg" alt="Slack logo" loading="lazy"></span> Slack</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/notion/ffffff" alt="Notion logo" loading="lazy"></span> Notion</div>
+                    <div class="sb-ticker__item"><span class="ticker-icon"><img src="https://cdn.simpleicons.org/figma/ffffff" alt="Figma logo" loading="lazy"></span> Figma</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <main>
         <section class="credibility" aria-label="Trusted by metrics">
@@ -89,6 +156,106 @@
                 <div class="credibility-item fade-in">
                     <strong>Conversion-first</strong>
                     <span>Designed to reduce friction, increase trust, and grow revenue.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="work-gallery" aria-label="Featured visual case studies">
+            <div class="container">
+                <div class="section-label fade-in">Featured work</div>
+                <h2 class="fade-in">Vivid visual stories from product launches, secure workspaces, and conversion-led experiences.</h2>
+                <p class="fade-in">Every image reflects a premium digital interface with strong hierarchy, fast-read messaging, and polished presentation the kind of work buyers feel is built to perform.</p>
+                <div class="gallery-grid">
+                    <article class="gallery-card fade-in">
+                        <div class="gallery-preview">
+                            <img src="assets/img/222.png" alt="AI-powered analytics dashboard interface" loading="lazy">
+                        </div>
+                        <div class="gallery-copy">
+                            <strong>TIMEORA – Luxury Watches</strong>
+                            <span>TIMEORA is a high-end horology platform focusing on timeless craftsmanship and heritage. We engineered a digital showroom that mirrors the precision and legacy of their luxury timepieces.</span>
+                        </div>
+                    </article>
+                    <article class="gallery-card fade-in">
+                        <div class="gallery-preview">
+                            <img src="assets/img/444.png" alt="SaaS product launch interface" loading="lazy">
+                        </div>
+                        <div class="gallery-copy">
+                            <strong>LUU BANK – Modern Banking</strong>
+                            <span>LUU BANK provides next-generation financial systems for smarter, safer, and faster money management. We delivered a secure core banking interface built for high-trust user interactions.</span>
+                        </div>
+                    </article>
+                    <article class="gallery-card fade-in">
+                        <div class="gallery-preview">
+                            <img src="assets/img/555.png" alt="Modern enterprise website preview" loading="lazy">
+                        </div>
+                        <div class="gallery-copy">
+                            <strong>LUXORA – Lifestyle E-Commerce</strong>
+                            <span>LUXORA is a premium e-commerce destination for curated lifestyle products. The platform features a seamless shopping experience optimized for high conversion and frictionless checkout.</span>
+                        </div>
+                    </article>
+                    <article class="gallery-card fade-in">
+                        <div class="gallery-preview">
+                            <img src="assets/img/666.png" alt="Secure services application screenshot" loading="lazy">
+                        </div>
+                        <div class="gallery-copy">
+                            <strong>THREADZ – Fashion Store</strong>
+                            <span>THREADZ is a fast-growth fashion marketplace focusing on everyday style and comfort. We built a responsive, mobile-first store that simplifies discovery and accelerates the path to purchase.</span>
+                        </div>
+                    </article>
+                    <article class="gallery-card fade-in">
+                        <div class="gallery-preview">
+                            <img src="assets/img/portfolio-1.png" alt="Customer success platform interface" loading="lazy">
+                        </div>
+                        <div class="gallery-copy">
+                            <strong>Tea Brand Concepts</strong>
+                            <span>A premium branding and web concept for artisan tea blenders. The experience emphasizes refined lifestyle aesthetics through an elegant, content-rich storytelling approach to digital retail.</span>
+                        </div>
+                    </article>
+                    <article class="gallery-card fade-in">
+                        <div class="gallery-preview">
+                            <img src="assets/img/portfolio-2.png" alt="Vendor portal performance dashboard" loading="lazy">
+                        </div>
+                        <div class="gallery-copy">
+                            <strong>LUU BANK – Data Interface</strong>
+                            <span>The analytics wing of LUU BANK. We created a data-driven dashboard that translates complex financial metrics into actionable insights for smarter institutional decision-making.</span>
+                        </div>
+                    </article>
+                    <article class="gallery-card fade-in">
+                        <div class="gallery-preview">
+                            <img src="assets/img/portfolio-3.png" alt="Conversion-driven landing page design" loading="lazy">
+                        </div>
+                        <div class="gallery-copy">
+                            <strong>2B Industrial Solutions</strong>
+                            <span>2B Industrial is a leader in durable engineering and supply chain logistics. We developed a performance-built portal to manage heavy industry projects and high-scale technical specifications.</span>
+                        </div>
+                    </article>
+                    <article class="gallery-card fade-in">
+                        <div class="gallery-preview">
+                            <img src="assets/img/preview.png" alt="Design system preview screenshot" loading="lazy">
+                        </div>
+                        <div class="gallery-copy">
+                            <strong>Rolex Concept – Luxury Watches</strong>
+                            <span>A strategic design exploration for luxury watch collections. This concept focuses on discerning collectors, utilizing a high-fidelity interface to showcase exclusivity and prestige.</span>
+                        </div>
+                    </article>
+                    <article class="gallery-card fade-in">
+                        <div class="gallery-preview">
+                            <img src="assets/img/Screenshot%202026-05-15%20134009.png" alt="Data insights desktop view" loading="lazy">
+                        </div>
+                        <div class="gallery-copy">
+                            <strong>Mirelle Industries</strong>
+                            <span>Mirelle Industries is a primary producer of premium palm oil. We built a trusted digital presence to support their global export operations and industrial supply chain transparency.</span>
+                        </div>
+                    </article>
+                    <article class="gallery-card fade-in">
+                        <div class="gallery-preview">
+                            <img src="assets/img/Screenshot%202026-05-15%20134733.png" alt="Strategic UX experience screenshot" loading="lazy">
+                        </div>
+                        <div class="gallery-copy">
+                            <strong>Lawrence & Partners</strong>
+                            <span>Lawrence & Partners is a global law firm with over 130 professionals specializing in areas like antitrust, banking, capital markets, corporate law, labor, mergers & acquisitions, and tax.</span>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -115,26 +282,165 @@
         </section>
 
         <section class="testimonial" aria-label="Client testimonial">
-            <div class="container testimonial-grid">
-                <div class="testimonial-card">
-                    <p>“ICI Tech helped us launch a conversion-first product experience with enterprise-level security. Their team moved faster than expected, and the new platform is now the backbone of our sales motion.”</p>
-                    <footer>
-                        <strong>Amira Wells</strong>
-                        <span>COO, Verto Finance</span>
-                    </footer>
-                </div>
-                <div class="testimonial-stats">
-                    <div class="stat-block">
-                        <strong>28%</strong>
-                        <span>increase in qualified leads</span>
+            <div class="sb-ticker" data-sb-ticker data-sb-speed="35">
+                <div class="sb-ticker__inner">
+                    <div class="sb-ticker__track">
+                        <div class="testimonial-card">
+                            <p>ICI Tech helped us launch a conversion-first product experience with enterprise-level security. Their team moved faster than expected, and the new platform is now the backbone of our sales motion.</p>
+                            <footer>
+                                <strong>Amira Wells</strong>
+                                <span>COO, Verto Finance</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>Working with ICI Tech means never having to worry about our platform's stability. Their builds are rock-solid, and we've seen zero downtime since launch. That's true reliability.</p>
+                            <footer>
+                                <strong>Sarah Jenkins</strong>
+                                <span>CTO, Global Payments Inc.</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>We needed a partner who understood the importance of uptime and data integrity. ICI Tech delivered a system that just works, day in and day out. It's a huge weight off our shoulders.</p>
+                            <footer>
+                                <strong>Mark Davis</strong>
+                                <span>Head of Engineering, SecureCloud</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>Our customers rely on us 24/7, and we needed a website that could keep up. ICI Tech built a platform that's not only fast but incredibly dependable. It's been a game-changer for our brand reputation.</p>
+                            <footer>
+                                <strong>Emily White</strong>
+                                <span>Marketing Director, HealthConnect</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>From day one, ICI Tech emphasized building for the long term. Their robust architecture has proven itself time and again, handling peak loads without a hitch. We trust them completely.</p>
+                            <footer>
+                                <strong>Dr. Alan Reed</strong>
+                                <span>CEO, BioGen Innovations</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>The peace of mind that comes with a reliable platform is invaluable. ICI Tech delivered exactly that – a stable, secure, and high-performing system that lets us focus on our business, not IT issues.</p>
+                            <footer>
+                                <strong>Jessica Lee</strong>
+                                <span>Product Lead, FinTrack Solutions</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>When it comes to our customer-facing portal, reliability is non-negotiable. ICI Tech understood this deeply and engineered a solution that has exceeded all our expectations for stability and performance.</p>
+                            <footer>
+                                <strong>Michael Brown</strong>
+                                <span>VP Operations, EnterpriseLink</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>Our previous website was a constant source of headaches. ICI Tech rebuilt it from the ground up, focusing on core reliability. Now, it's a seamless experience for our users, and our support tickets have plummeted.</p>
+                            <footer>
+                                <strong>Chloe Green</strong>
+                                <span>Founder, EcoMarketplace</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>They don't just build; they engineer for resilience. Our new SaaS platform, thanks to ICI Tech, has maintained perfect uptime even during unexpected traffic spikes. That's the kind of reliability every business needs.</p>
+                            <footer>
+                                <strong>Daniel Kim</strong>
+                                <span>Head of Product, DataStream Analytics</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>Choosing ICI Tech was the best decision for our e-commerce site. The platform they delivered is incredibly stable, handles transactions flawlessly, and gives us confidence during busy sales periods. Truly reliable partners.</p>
+                            <footer>
+                                <strong>Olivia Taylor</strong>
+                                <span>Owner, Artisan Crafts Co.</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>The team at ICI Tech built our internal tools with such attention to detail and robustness. Our daily operations now run smoother than ever, thanks to their reliable and well-engineered solutions.</p>
+                            <footer>
+                                <strong>Robert Miller</strong>
+                                <span>Director of IT, LogisticsPro</span>
+                            </footer>
+                        </div>
                     </div>
-                    <div class="stat-block">
-                        <strong>14%</strong>
-                        <span>improvement in checkout conversion</span>
-                    </div>
-                    <div class="stat-block">
-                        <strong>4.9/5</strong>
-                        <span>client satisfaction</span>
+                    <div class="sb-ticker__track">
+                        <div class="testimonial-card">
+                            <p>ICI Tech helped us launch a conversion-first product experience with enterprise-level security. Their team moved faster than expected, and the new platform is now the backbone of our sales motion.</p>
+                            <footer>
+                                <strong>Amira Wells</strong>
+                                <span>COO, Verto Finance</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>Working with ICI Tech means never having to worry about our platform's stability. Their builds are rock-solid, and we've seen zero downtime since launch. That's true reliability.</p>
+                            <footer>
+                                <strong>Sarah Jenkins</strong>
+                                <span>CTO, Global Payments Inc.</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>We needed a partner who understood the importance of uptime and data integrity. ICI Tech delivered a system that just works, day in and day out. It's a huge weight off our shoulders.</p>
+                            <footer>
+                                <strong>Mark Davis</strong>
+                                <span>Head of Engineering, SecureCloud</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>Our customers rely on us 24/7, and we needed a website that could keep up. ICI Tech built a platform that's not only fast but incredibly dependable. It's been a game-changer for our brand reputation.</p>
+                            <footer>
+                                <strong>Emily White</strong>
+                                <span>Marketing Director, HealthConnect</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>From day one, ICI Tech emphasized building for the long term. Their robust architecture has proven itself time and again, handling peak loads without a hitch. We trust them completely.</p>
+                            <footer>
+                                <strong>Dr. Alan Reed</strong>
+                                <span>CEO, BioGen Innovations</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>The peace of mind that comes with a reliable platform is invaluable. ICI Tech delivered exactly that – a stable, secure, and high-performing system that lets us focus on our business, not IT issues.</p>
+                            <footer>
+                                <strong>Jessica Lee</strong>
+                                <span>Product Lead, FinTrack Solutions</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>When it comes to our customer-facing portal, reliability is non-negotiable. ICI Tech understood this deeply and engineered a solution that has exceeded all our expectations for stability and performance.</p>
+                            <footer>
+                                <strong>Michael Brown</strong>
+                                <span>VP Operations, EnterpriseLink</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>Our previous website was a constant source of headaches. ICI Tech rebuilt it from the ground up, focusing on core reliability. Now, it's a seamless experience for our users, and our support tickets have plummeted.</p>
+                            <footer>
+                                <strong>Chloe Green</strong>
+                                <span>Founder, EcoMarketplace</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>They don't just build; they engineer for resilience. Our new SaaS platform, thanks to ICI Tech, has maintained perfect uptime even during unexpected traffic spikes. That's the kind of reliability every business needs.</p>
+                            <footer>
+                                <strong>Daniel Kim</strong>
+                                <span>Head of Product, DataStream Analytics</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>Choosing ICI Tech was the best decision for our e-commerce site. The platform they delivered is incredibly stable, handles transactions flawlessly, and gives us confidence during busy sales periods. Truly reliable partners.</p>
+                            <footer>
+                                <strong>Olivia Taylor</strong>
+                                <span>Owner, Artisan Crafts Co.</span>
+                            </footer>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>The team at ICI Tech built our internal tools with such attention to detail and robustness. Our daily operations now run smoother than ever, thanks to their reliable and well-engineered solutions.</p>
+                            <footer>
+                                <strong>Robert Miller</strong>
+                                <span>Director of IT, LogisticsPro</span>
+                            </footer>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -166,22 +472,65 @@
     </main>
 
     <footer class="footer">
-        <div class="container footer-grid">
-            <div>
-                <a class="logo footer-logo" href="index.html">ICI Tech</a>
-                <p>Enterprise web experiences and product systems for fast-growth technology teams.</p>
-            </div>
-            <div class="footer-links">
-                <a href="services.html">Services</a>
-                <a href="about.html">About</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="contact.html">Contact</a>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div>
+                    <a class="logo footer-logo" href="index.html">
+                        <img src="assets/img/icon.png" alt="ICI Tech Logo" class="logo-icon">
+                        ICI Tech
+                    </a>
+                    <p>Enterprise web experiences and product systems designed to scale. Building conversion-first platforms for growth.</p>
+                </div>
+                
+                <!-- Products Section -->
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Web Services</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="footer-note">Copyright © 2026 ICI Tech.</div>
+
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-policy-links">
+                    <a href="policies.html#privacy">Privacy Policy</a>
+                    <a href="policies.html#cookies">Cookie Policy</a>
+                    <a href="policies.html#terms">Terms of Use</a>
+                </div>
+                <div class="footer-note">© 2026 ICI Tech. All rights reserved.</div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="gallery-modal" aria-hidden="true">
+        <div class="modal-content">
+            <img src="" alt="Expanded work preview" id="modalImage">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
 
     <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
     <script src="assets/script.js"></script>
+    <script src="assets/three-bg.js"></script>
+    <script src="assets/cookie-consent.js"></script>
+    <script src="assets/sliders-effects/sliders.js" defer></script>
 </body>
 </html>

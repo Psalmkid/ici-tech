@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ICI Tech Process — how we deliver premium platforms. Our methodology for discovery, design, engineering, and launch.">
+    <meta name="keywords" content="process, methodology, how we work, delivery process, project phases, web development process">
+    <title>Our Process - ICI Tech</title>
+    <link rel="icon" type="image/png" href="assets/img/Favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/Favicon.png">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/three.min.js" defer></script>
+</head>
+<body>
+    <canvas id="three-bg"></canvas>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary navigation">
+            <div class="container nav-inner">
+                <a class="logo" href="index.html">ICI Tech</a>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu-list">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a class="nav-cta" href="contact.html">Start a project</a>
+            </div>
+        </nav>
+        <section class="hero hero-bg">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Our Process</p>
+                    <h1>A proven methodology for premium platform delivery.</h1>
+                    <p>From strategic discovery to post-launch optimization, we follow a disciplined approach that reduces risk, keeps timelines predictable, and delivers results.</p>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="process-section">
+            <div class="container">
+                <div class="section-label fade-in">How we work</div>
+                <h2 class="fade-in">The proven phases that lead to successful launches.</h2>
+
+                <div class="process-timeline">
+                    <div class="process-phase fade-in">
+                        <div class="phase-number">01</div>
+                        <div class="phase-content">
+                            <h3>Discovery & Strategy</h3>
+                            <p class="phase-duration">2-3 weeks</p>
+                            <div class="phase-details">
+                                <p>We immerse ourselves in your market, competition, customer pain points, and business objectives. This phase defines the product direction, ensures alignment across stakeholders, and sets measurable success criteria.</p>
+                                <div class="phase-deliverables">
+                                    <strong>Deliverables:</strong>
+                                    <ul>
+                                        <li>Customer research and persona development</li>
+                                        <li>Competitive landscape analysis</li>
+                                        <li>Product strategy roadmap</li>
+                                        <li>Feature prioritization matrix</li>
+                                        <li>Success metrics and KPIs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-phase fade-in">
+                        <div class="phase-number">02</div>
+                        <div class="phase-content">
+                            <h3>UX Design & Prototyping</h3>
+                            <p class="phase-duration">3-4 weeks</p>
+                            <div class="phase-details">
+                                <p>Our design team creates high-fidelity wireframes and interactive prototypes. Every interface is grounded in user psychology, conversion science, and your brand identity. We test concepts early and iterate based on feedback.</p>
+                                <div class="phase-deliverables">
+                                    <strong>Deliverables:</strong>
+                                    <ul>
+                                        <li>User journey maps and interaction flows</li>
+                                        <li>High-fidelity UI mockups</li>
+                                        <li>Interactive prototypes for testing</li>
+                                        <li>Design system documentation</li>
+                                        <li>Design handoff specifications</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-phase fade-in">
+                        <div class="phase-number">03</div>
+                        <div class="phase-content">
+                            <h3>Technical Architecture</h3>
+                            <p class="phase-duration">1-2 weeks</p>
+                            <div class="phase-details">
+                                <p>Our engineering team designs the system architecture, database schema, API contracts, and deployment infrastructure. We prioritize scalability, security, performance, and maintainability from the ground up.</p>
+                                <div class="phase-deliverables">
+                                    <strong>Deliverables:</strong>
+                                    <ul>
+                                        <li>System architecture diagram</li>
+                                        <li>Database schema design</li>
+                                        <li>API specifications and documentation</li>
+                                        <li>Infrastructure and deployment plan</li>
+                                        <li>Security and compliance assessment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-phase fade-in">
+                        <div class="phase-number">04</div>
+                        <div class="phase-content">
+                            <h3>Development & Engineering</h3>
+                            <p class="phase-duration">6-12 weeks (varies)</p>
+                            <div class="phase-details">
+                                <p>We build your platform using modern, scalable frameworks and best practices. Development happens in two-week sprints with regular demonstrations and feedback cycles. You stay informed every step of the way.</p>
+                                <div class="phase-deliverables">
+                                    <strong>Deliverables:</strong>
+                                    <ul>
+                                        <li>Fully functional frontend and backend</li>
+                                        <li>Database implementation</li>
+                                        <li>API endpoints and integrations</li>
+                                        <li>User authentication and authorization</li>
+                                        <li>Automated testing suite</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-phase fade-in">
+                        <div class="phase-number">05</div>
+                        <div class="phase-content">
+                            <h3>Quality Assurance & Testing</h3>
+                            <p class="phase-duration">2-3 weeks (parallel)</p>
+                            <div class="phase-details">
+                                <p>Rigorous testing ensures your platform is bulletproof. We test functionality, performance, security, accessibility, and real-world usage patterns. Every issue is tracked, prioritized, and resolved before launch.</p>
+                                <div class="phase-deliverables">
+                                    <strong>Deliverables:</strong>
+                                    <ul>
+                                        <li>Comprehensive test coverage</li>
+                                        <li>Performance optimization report</li>
+                                        <li>Security penetration testing</li>
+                                        <li>Accessibility compliance audit</li>
+                                        <li>Bug reports and resolutions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-phase fade-in">
+                        <div class="phase-number">06</div>
+                        <div class="phase-content">
+                            <h3>Launch & Handoff</h3>
+                            <p class="phase-duration">1-2 weeks</p>
+                            <div class="phase-details">
+                                <p>We deploy your platform to production with zero downtime. Your team gets comprehensive training, documentation, and support during the critical first weeks. We monitor closely and optimize based on real user feedback.</p>
+                                <div class="phase-deliverables">
+                                    <strong>Deliverables:</strong>
+                                    <ul>
+                                        <li>Production deployment and monitoring</li>
+                                        <li>Team training and documentation</li>
+                                        <li>Launch support and optimization</li>
+                                        <li>Analytics setup and baseline</li>
+                                        <li>Post-launch support plan</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-phase fade-in">
+                        <div class="phase-number">07</div>
+                        <div class="phase-content">
+                            <h3>Growth & Optimization</h3>
+                            <p class="phase-duration">Ongoing</p>
+                            <div class="phase-details">
+                                <p>Your platform's job is just beginning at launch. We monitor performance metrics, analyze user behavior, and optimize continuously. Regular check-ins ensure your platform evolves with your business.</p>
+                                <div class="phase-deliverables">
+                                    <strong>Deliverables:</strong>
+                                    <ul>
+                                        <li>Monthly performance reports</li>
+                                        <li>Conversion optimization recommendations</li>
+                                        <li>Feature enhancement roadmap</li>
+                                        <li>Security and maintenance updates</li>
+                                        <li>Dedicated support access</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact">
+            <div class="container">
+                <div class="section-label fade-in">Why this process works</div>
+                <h2 class="fade-in">Methodology built on predictability and outcomes.</h2>
+                <div class="impact-grid">
+                    <article class="impact-card fade-in">
+                        <strong>Early alignment saves months</strong>
+                        <p>We invest in discovery upfront so we build the right thing. Fewer surprises, fewer rewrites, faster time to market.</p>
+                    </article>
+                    <article class="impact-card fade-in">
+                        <strong>Design-driven development</strong>
+                        <p>Engineering follows design specifications closely. This keeps timelines predictable and reduces integration issues.</p>
+                    </article>
+                    <article class="impact-card fade-in">
+                        <strong>Quality by design</strong>
+                        <p>We test throughout the process, not just at the end. This catches issues early when they're cheapest to fix.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div>
+                    <a class="logo footer-logo" href="index.html">ICI Tech</a>
+                    <p>Enterprise web experiences and product systems designed to scale. Building conversion-first platforms for growth.</p>
+                </div>
+                
+                <!-- Products Section -->
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Web Services</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Section --></div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-policy-links">
+                    <a href="policies.html#privacy">Privacy Policy</a>
+                    <a href="policies.html#cookies">Cookie Policy</a>
+                    <a href="policies.html#terms">Terms of Use</a>
+                </div>
+                <div class="footer-note">© 2026 ICI Tech. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+    <script src="assets/script.js"></script>
+    <script src="assets/three-bg.js"></script>
+    <script src="assets/cookie-consent.js"></script>
+</body>
+</html>
